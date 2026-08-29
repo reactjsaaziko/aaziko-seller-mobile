@@ -10,11 +10,12 @@ import { Link } from 'expo-router';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#ffffff', dark: '#11181C' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+          source={require('@/assets/images/aaziko-logo.png')}
+          style={styles.aazikoLogo}
+          contentFit="contain"
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -88,11 +89,12 @@ const styles = StyleSheet.create({
     gap: 8,
     marginBottom: 8,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
+  aazikoLogo: {
+    height: 84,
+    width: 280,
+    top: 83,
+    left: '50%',
+    marginLeft: -140,
     position: 'absolute',
   },
 });
