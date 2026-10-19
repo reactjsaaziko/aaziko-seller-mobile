@@ -1,446 +1,176 @@
 ---
-title: "Change Documentation — aaziko-seller-mobile"
+title: "Change Documentation — aaziko-seller"
 ---
 
-# Change Documentation — aaziko-seller-mobile
+# Change Documentation — aaziko-seller
 
 > Auto-generated on every push, to any branch. Newest entry first. Old entries are never removed.
 
 <!-- AAZIKO-CHANGELOG:INSERT-AFTER -->
 
-## 2026-10-19 16:14 — branch `main`
-
-### Overview
-
-This push to branch `main` changed **2 file(s)**: 2 new, 0 modified, 0 removed (+457 / −0 lines).
-
-Main areas touched: `.aaziko-flow` (1), `.github/workflows` (1).
-
-### New files
-
-#### `.aaziko-flow/changelog.mjs`
-
-*New file — 347 lines*
-
-- Defines: `sh`, `shSafe`, `git`, `esc`, `code`, `list`, `repo`, `declName`, `collect`, `minusSet` and 9 more.
-- Uses: `node:child_process`, `node:fs`, `node:path`.
-- Reads environment variables: `BEFORE_SHA`, `AFTER_SHA`, `BASE_BRANCH`, `BRANCH`.
-
-**Other new files**
-
-- `.github/workflows/aaziko-changelog.yml` — 110 lines
-
-### Impact
-
-- Code now reads `BEFORE_SHA` — make sure it is set in the `.env` / deployment.
-- Code now reads `AFTER_SHA` — make sure it is set in the `.env` / deployment.
-- Code now reads `BASE_BRANCH` — make sure it is set in the `.env` / deployment.
-- Code now reads `BRANCH` — make sure it is set in the `.env` / deployment.
-- Build/deploy configuration changed: `.github/workflows/aaziko-changelog.yml` — re-check the build and deployment.
-
----
-
 <!-- AAZIKO-CHANGELOG:HISTORY-START -->
 
-> **History before automatic documentation was switched on** — one entry per day of the `main` branch, newest first.
+> History of the main branch, one entry per day, newest first.
 
-## 2026-09-26 — branch `main` (history)
+## 19 October 2026 — main branch (history)
 
-### Overview
+### Summary
 
-On this day, branch `main` received changes to **1 file(s)**: 1 new, 0 modified, 0 removed (+94 / −0 lines).
+On 19 October 2026, the main branch received changes to 2 files: 2 added, 0 changed and 0 removed, with 463 lines added and 0 lines removed in total. Most of the work was in the main project folder and the workflows area.
 
-Main areas touched: `.github/workflows` (1).
+### What was added
 
-### New files
-
-**Other new files**
-
-- `.github/workflows/backup-to-gitlab.yml` — 94 lines
+- 2 automatic change documentation files were added in the workflows area.
 
 ### Impact
 
-- Build/deploy configuration changed: `.github/workflows/backup-to-gitlab.yml` — re-check the build and deployment.
+- These changes are self-contained; no other part of the project depends on them.
 
 ---
 
-## 2026-08-29 — branch `main` (history)
+## 26 September 2026 — main branch (history)
 
-### Overview
+### Summary
 
-On this day, branch `main` received changes to **29 file(s)**: 16 new, 11 modified, 2 removed (+2992 / −234 lines).
+On 26 September 2026, the main branch received changes to 1 file: 1 added, 0 changed and 0 removed, with 94 lines added and 0 lines removed in total. Most of the work was in the workflows area.
 
-Main areas touched: `assets/images` (8), `lib` (6), `(project root)` (5), `app` (4), `app/(tabs)` (3), `components` (1).
+### What was added
 
-### New files
-
-#### `app/order-detail.tsx`
-
-*New file — 1047 lines*
-
-- Defines: `QueueItem`, `StageKey`, `stageHasData`, `currentStageTab`, `StageImages`, `Capture`, `fileName`, `isVideo`, `isImageFile`, `isPdfFile`, `VideoThumb`, `MediaViewer`, `PdfThumb`, `post`, `OrderDetailScreen`, `setQtyForTab`, `setNotesForTab`, `setBoxField`, `persistFields`, `enqueueMedia`, `captureLocationMeta`, `captureAndQueue`, `pickDocument`, `stageHasMedia`, `goToTab`, `statusIcon`, `renderStamp`, `openDoc`, `renderCompleted`, `BoxInput`.
-- Uses: `@expo/vector-icons`, `expo-document-picker`, `expo-image-picker`, `expo-location`, `expo-network`, `expo-video`, `expo-web-browser`, `react-native-webview`, `expo-router`, `react`, `react-native-safe-area-context`, `@/constants/api`, `@/lib/manufacturing`, `@/lib/orders`, `@/lib/upload-queue`, `@/lib/image-meta`.
-
-#### `app/orders.tsx`
-
-*New file — 326 lines*
-
-- Defines: `StatusTab`, `OrderCard`, `OrdersScreen`.
-- Uses: `@expo/vector-icons`, `expo-router`, `react`, `react-native-safe-area-context`, `@/lib/orders`.
-
-#### `app/index.tsx`
-
-*New file — 294 lines*
-
-- Defines: `LoginScreen`, `onLogin`, `openForgotPassword`, `revealForm`.
-- Uses: `@expo/vector-icons`, `expo-image`, `expo-router`, `react`, `react-native-safe-area-context`, `@/lib/auth`, `@/assets/images/aaziko-logo.png`, `@/assets/images/login-illustration.png`.
-
-#### `lib/orders.ts`
-
-*New file — 234 lines*
-
-- Defines: `UiOrder`, `StatusKey`, `OrdersResult`, `norm`, `firstProduct`, `productCount`, `fmtDate`, `formatMoney`, `orderAmount`, `advanceReceived`, `productName`, `sampleLabel`, `mapOrder`, `FetchOnce`, `fetchOrdersOnce`, `delay`, `isTransientDirectory`, `getOrders`.
-- Uses: `@/constants/api`, `@/lib/auth`.
-
-#### `lib/media.ts`
-
-*New file — 159 lines*
-
-- Defines: `UploadResult`, `extractUrl`, `firstFailureMessage`, `postUpload`, `uploadMedia`.
-- Uses: `@/constants/api`, `@/lib/auth`.
-
-#### `lib/manufacturing.ts`
-
-*New file — 157 lines*
-
-- Defines: `BoxDetails`, `ManufacturingData`, `GetManufacturingResult`, `getManufacturing`, `saveManufacturing`.
-- Uses: `@/constants/api`, `@/lib/auth`.
-
-#### `lib/auth.ts`
-
-*New file — 153 lines*
-
-- Defines: `StoredUser`, `LoginResult`, `login`, `getAccessToken`, `refreshAccessToken`, `getStoredUser`, `logout`.
-- Uses: `@react-native-async-storage/async-storage`, `@/constants/api`.
-
-#### `lib/upload-queue.ts`
-
-*New file — 115 lines*
-
-- Defines: `StageKey`, `QueueItem`, `getQueue`, `setQueue`, `enqueue`, `removeFromQueue`, `getQueueForOrder`, `getUploadError`, `ProcessResult`, `processQueue`.
-- Uses: `@react-native-async-storage/async-storage`, `@/lib/image-meta`, `@/lib/manufacturing`, `@/lib/media`.
-
-#### `app/(tabs)/home.tsx`
-
-*New file — 100 lines*
-
-- Code moved here from other files: `HomeScreen`.
-- Uses: `expo-image`, `react-native`, `@/components/hello-wave`, `@/components/parallax-scroll-view`, `@/components/themed-text`, `@/components/themed-view`, `expo-router`, `@/assets/images/aaziko-logo.png`.
-
-#### `lib/image-meta.ts`
-
-*New file — 68 lines*
-
-- Defines: `ImageMeta`, `getMetaMap`, `saveMap`, `setMeta`, `getMeta`, `copyMeta`, `formatWhen`.
-- Uses: `@react-native-async-storage/async-storage`.
-
-#### `constants/api.ts`
-
-*New file — 61 lines*
-
-- Defines: `resolveMediaUrl`.
-
-#### `components/aaziko-splash.tsx`
-
-*New file — 47 lines*
-
-- Defines: `AazikoSplash`.
-- Uses: `react`, `react-native`, `@/assets/images/aaziko-logo.png`.
-
-**Other new files**
-
-- `eas.json` — 21 lines
-- `assets/images/aaziko-icon.png` — binary file
-- `assets/images/aaziko-logo.png` — binary file
-- `assets/images/login-illustration.png` — binary file
-
-### Changes to existing files
-
-#### `app/_layout.tsx`
-
-*Existing file, modified — +30 / −4 lines*
-
-- Changed the code inside: `RootLayout`.
-- Now also uses: `expo-network`, `react`, `react-native`, `@/components/aaziko-splash`, `@/lib/upload-queue`.
-
-#### `package.json`
-
-*Existing file, modified — +13 / −4 lines*
-
-- Added package `@react-native-async-storage/async-storage` 2.2.0
-- Added package `expo-document-picker` ~14.0.8
-- Added package `expo-file-system` ~19.0.24
-- Added package `expo-image-picker` ~17.0.11
-- Added package `expo-location` ~19.0.8
-- Added package `expo-network` ~8.0.8
-- Added package `expo-video` ~3.0.16
-- Added package `expo-video-thumbnails` ~10.0.8
-- Added package `react-native-webview` 13.15.0
-- Changed npm script `android`
-- Changed npm script `ios`
-
-#### `app/(tabs)/_layout.tsx`
-
-*Existing file, modified — +1 / −1 lines*
-
-- Changed the code inside: `TabLayout`.
-
-**Other modified files**
-
-- `package-lock.json` — +135 / −10 lines
-- `app.json` — +30 / −5 lines
-- `README.md` — +1 / −0 lines
-- `assets/images/android-icon-background.png` — binary file
-- `assets/images/android-icon-foreground.png` — binary file
-- `assets/images/android-icon-monochrome.png` — binary file
-- `assets/images/favicon.png` — binary file
-- `assets/images/icon.png` — binary file
-
-### Removed files
-
-#### `scripts/reset-project.js`
-
-*Removed file — 112 lines removed*
-
-- It defined: `Index`, `RootLayout`, `moveDirectories`.
-
-#### `app/(tabs)/index.tsx`
-
-*Removed file — 98 lines removed*
-
+- 1 build and deployment setting file was added in the workflows area.
 
 ### Impact
 
-- Dependencies changed in `package.json` — run `npm install` and rebuild the Docker image before deploying.
+- Build or deployment settings changed, so the build and the deployment should be checked.
 
 ---
 
-## 2026-08-24 — branch `main` (history)
-
-### Overview
-
-On this day, branch `main` received changes to **41 file(s)**: 41 new, 0 modified, 0 removed (+14162 / −0 lines).
-
-Main areas touched: `assets/images` (10), `(project root)` (9), `components` (6), `app/(tabs)` (3), `components/ui` (3), `hooks` (3).
-
-### New files
-
-#### `app/(tabs)/explore.tsx`
-
-*New file — 112 lines*
-
-- Defines: `TabTwoScreen`.
-- Uses: `expo-image`, `react-native`, `@/components/ui/collapsible`, `@/components/external-link`, `@/components/parallax-scroll-view`, `@/components/themed-text`, `@/components/themed-view`, `@/components/ui/icon-symbol`, `@/constants/theme`, `@/assets/images/react-logo.png`.
-
-#### `scripts/reset-project.js`
-
-*New file — 112 lines*
-
-- Defines: `Index`, `RootLayout`, `moveDirectories`.
-- Uses: `fs`, `path`, `readline`.
-
-#### `app/(tabs)/index.tsx`
-
-*New file — 98 lines*
-
-- Defines: `HomeScreen`.
-- Uses: `expo-image`, `react-native`, `@/components/hello-wave`, `@/components/parallax-scroll-view`, `@/components/themed-text`, `@/components/themed-view`, `expo-router`, `@/assets/images/partial-react-logo.png`.
-
-#### `components/parallax-scroll-view.tsx`
-
-*New file — 79 lines*
-
-- Defines: `Props`, `ParallaxScrollView`.
-- Uses: `react`, `react-native`, `@/components/themed-view`, `@/hooks/use-color-scheme`, `@/hooks/use-theme-color`.
-
-#### `components/themed-text.tsx`
-
-*New file — 60 lines*
-
-- Defines: `ThemedTextProps`, `ThemedText`.
-- Uses: `react-native`, `@/hooks/use-theme-color`.
-
-#### `constants/theme.ts`
-
-*New file — 53 lines*
-
-- Uses: `react-native`.
-
-#### `package.json`
-
-*New file — 47 lines*
-
-- Added package `@expo/vector-icons` ^15.0.3
-- Added package `@react-navigation/bottom-tabs` ^7.4.0
-- Added package `@react-navigation/elements` ^2.6.3
-- Added package `@react-navigation/native` ^7.1.8
-- Added package `expo` ~54.0.36
-- Added package `expo-constants` ~18.0.13
-- Added package `expo-font` ~14.0.12
-- Added package `expo-haptics` ~15.0.8
-- Added package `expo-image` ~3.0.11
-- Added package `expo-linking` ~8.0.12
-- Added package `expo-router` ~6.0.24
-- Added package `expo-splash-screen` ~31.0.13
-- Added package `expo-status-bar` ~3.0.9
-- Added package `expo-symbols` ~1.0.8
-- Added package `expo-system-ui` ~6.0.9
-- Added package `expo-web-browser` ~15.0.11
-- Added package `react` 19.1.0
-- Added package `react-dom` 19.1.0
-- Added package `react-native` 0.81.5
-- Added package `react-native-gesture-handler` ~2.28.0
-- Added package `react-native-worklets` 0.5.1
-- Added package `react-native-reanimated` ~4.1.1
-- Added package `react-native-safe-area-context` ~5.6.0
-- Added package `react-native-screens` ~4.16.0
-- Added package `react-native-web` ~0.21.0
-- Added package `@types/react` ~19.1.0
-- Added package `typescript` ~5.9.2
-- Added package `eslint` ^9.25.0
-- Added package `eslint-config-expo` ~10.0.0
-- Added npm script `start`
-- Added npm script `reset-project`
-- Added npm script `android`
-- Added npm script `ios`
-- Added npm script `web`
-- Added npm script `lint`
-
-#### `components/ui/collapsible.tsx`
-
-*New file — 45 lines*
-
-- Defines: `Collapsible`.
-- Uses: `react`, `react-native`, `@/components/themed-text`, `@/components/themed-view`, `@/components/ui/icon-symbol`, `@/constants/theme`, `@/hooks/use-color-scheme`.
-
-#### `components/ui/icon-symbol.tsx`
-
-*New file — 41 lines*
-
-- Defines: `IconMapping`, `IconSymbolName`, `IconSymbol`.
-- Uses: `@expo/vector-icons/MaterialIcons`, `expo-symbols`, `react`, `react-native`.
-
-#### `app/(tabs)/_layout.tsx`
-
-*New file — 35 lines*
-
-- Defines: `TabLayout`.
-- Uses: `expo-router`, `react`, `@/components/haptic-tab`, `@/components/ui/icon-symbol`, `@/constants/theme`, `@/hooks/use-color-scheme`.
-
-#### `components/ui/icon-symbol.ios.tsx`
-
-*New file — 32 lines*
-
-- Defines: `IconSymbol`.
-- Uses: `expo-symbols`, `react-native`.
-
-#### `app/modal.tsx`
-
-*New file — 29 lines*
-
-- Defines: `ModalScreen`.
-- Uses: `expo-router`, `react-native`, `@/components/themed-text`, `@/components/themed-view`.
-
-#### `components/external-link.tsx`
-
-*New file — 25 lines*
-
-- Defines: `Props`, `ExternalLink`.
-- Uses: `expo-router`, `expo-web-browser`, `react`.
-- Reads environment variables: `EXPO_OS`.
-
-#### `app/_layout.tsx`
-
-*New file — 24 lines*
-
-- Defines: `RootLayout`.
-- Uses: `@react-navigation/native`, `expo-router`, `expo-status-bar`, `react-native-reanimated`, `@/hooks/use-color-scheme`.
-
-#### `hooks/use-color-scheme.web.ts`
-
-*New file — 21 lines*
-
-- Defines: `useColorScheme`.
-- Uses: `react`, `react-native`.
-
-#### `hooks/use-theme-color.ts`
-
-*New file — 21 lines*
-
-- Defines: `useThemeColor`.
-- Uses: `@/constants/theme`, `@/hooks/use-color-scheme`.
-
-#### `components/hello-wave.tsx`
-
-*New file — 19 lines*
-
-- Defines: `HelloWave`.
-- Uses: `react-native-reanimated`.
-
-#### `components/haptic-tab.tsx`
-
-*New file — 18 lines*
-
-- Defines: `HapticTab`.
-- Uses: `@react-navigation/bottom-tabs`, `@react-navigation/elements`, `expo-haptics`.
-- Reads environment variables: `EXPO_OS`.
-
-#### `components/themed-view.tsx`
-
-*New file — 14 lines*
-
-- Defines: `ThemedViewProps`, `ThemedView`.
-- Uses: `react-native`, `@/hooks/use-theme-color`.
-
-#### `eslint.config.js`
-
-*New file — 10 lines*
-
-- Uses: `eslint/config`, `eslint-config-expo/flat`.
-
-#### `hooks/use-color-scheme.ts`
-
-*New file — 1 lines*
-
-- Data / content file (no functions or components).
-
-**Other new files**
-
-- `package-lock.json` — 13091 lines
-- `README.md` — 50 lines
-- `app.json` — 48 lines
-- `.gitignore` — 43 lines
-- `tsconfig.json` — 17 lines
-- `.vscode/settings.json` — 7 lines
-- `.claude/settings.json` — 5 lines
-- `AGENTS.md` — 3 lines
-- `.vscode/extensions.json` — 1 lines
-- `CLAUDE.md` — 1 lines
-- `assets/images/android-icon-background.png` — binary file
-- `assets/images/android-icon-foreground.png` — binary file
-- `assets/images/android-icon-monochrome.png` — binary file
-- `assets/images/favicon.png` — binary file
-- `assets/images/icon.png` — binary file
-- `assets/images/partial-react-logo.png` — binary file
-- `assets/images/react-logo.png` — binary file
-- `assets/images/react-logo@2x.png` — binary file
-- `assets/images/react-logo@3x.png` — binary file
-- `assets/images/splash-icon.png` — binary file
+## 29 August 2026 — main branch (history)
+
+### Summary
+
+On 29 August 2026, the main branch received changes to 29 files: 16 added, 11 changed and 2 removed, with 2992 lines added and 234 lines removed in total. Most of the work was in the main project folder, the images area, the tabs area, the constants area and the scripts area.
+
+### What was added
+
+- A new order detail screen was added; it provides queue item, stage key, stage has data, current stage tab, stage images, capture, file name, the check for video, the check for image file, the check for PDF file, video thumb, media viewer, PDF thumb, post, order detail screen, setting quantity for tab, setting notes for tab, setting box field, persist fields, enqueue media, capture location meta, capture and queue, pick document, stage has media, going to tab, status icon, display of stamp, opening doc, display of completed and box input.
+- A new orders screen was added; it provides status tab, order card and orders screen.
+- A new app screen was added; it provides login screen, reaction to login, opening forgot password and reveal form.
+- A new orders logic was added; it provides screen order, status key, orders result, norm, first product, product count, formatting date, formatting money, order amount, advance received, product name, sample label, mapping order, loading once, loading orders once, delay, the check for transient directory and getting orders.
+- A new media logic was added; it provides uploading result, extract link, first failure message, post upload and uploading media.
+- A new manufacturing logic was added; it provides box details, manufacturing data, getting manufacturing result, getting manufacturing and saving manufacturing.
+- A new auth logic was added; it provides stored user, login result, login, getting access token, refresh access token, getting stored user and logout.
+- A new uploading queue logic was added; it provides stage key, queue item, getting queue, setting queue, enqueue, removing from queue, getting queue for order, getting upload error, processing result and processing queue.
+- A new home screen in the tabs area was added; it takes over home screen from other parts of the code.
+- A new image meta logic was added; it provides image meta, getting meta map, saving map, setting meta, getting meta, copy meta and formatting when.
+- A new API logic in the constants area was added; it provides working out media link.
+- A new aaziko splash component was added; it provides aaziko splash.
+- 1 settings and data file was added.
+- 3 image files were added in the images area.
+
+### What was changed
+
+- The layout screen was changed: the logic for root layout was updated; it now also relies on the expo network library, the react library, the react native library, the aaziko splash part of the code and the uploading queue part of the code.
+- The external library @react-native-async-storage/async-storage was added (version 2.2.0).
+- The external library expo-document-picker was added (version ~14.0.8).
+- The external library expo-file-system was added (version ~19.0.24).
+- The external library expo-image-picker was added (version ~17.0.11).
+- The external library expo-location was added (version ~19.0.8).
+- The external library expo-network was added (version ~8.0.8).
+- The external library expo-video was added (version ~3.0.16).
+- The external library expo-video-thumbnails was added (version ~10.0.8).
+- The external library react-native-webview was added (version 13.15.0).
+- The android command of the project was changed.
+- The ios command of the project was changed.
+- The layout screen in the tabs area was changed: the logic for tab layout was updated.
+- 1 dependency lock file was updated.
+- 1 settings and data file was updated.
+- 1 written documentation file was updated.
+- 5 image files were updated in the images area.
+
+### What was removed
+
+- The resetting project logic in the scripts area was removed; it provided index, root layout and move directories.
+- The tabs screen was removed.
 
 ### Impact
 
-- Dependencies changed in `package.json` — run `npm install` and rebuild the Docker image before deploying.
-- Code now reads `EXPO_OS` — make sure it is set in the `.env` / deployment.
-- Build/deploy configuration changed: `tsconfig.json` — re-check the build and deployment.
+- External libraries changed, so they must be installed again and the application rebuilt before deploying.
+
+---
+
+## 24 August 2026 — main branch (history)
+
+### Summary
+
+On 24 August 2026, the main branch received changes to 41 files: 41 added, 0 changed and 0 removed, with 14162 lines added and 0 lines removed in total. Most of the work was in the main project folder, the images area, the tabs area, the screen area and the constants area.
+
+### What was added
+
+- A new explore screen in the tabs area was added; it provides tab two screen.
+- A new resetting project logic in the scripts area was added; it provides index, root layout and move directories.
+- A new tabs screen was added; it provides home screen.
+- A new parallax scroll view component was added; it provides props and parallax scroll view.
+- A new themed text component was added; it provides themed text props and themed text.
+- A new theme logic in the constants area was added.
+- The external library @expo/vector-icons was added (version ^15.0.3).
+- The external library @react-navigation/bottom-tabs was added (version ^7.4.0).
+- The external library @react-navigation/elements was added (version ^2.6.3).
+- The external library @react-navigation/native was added (version ^7.1.8).
+- The external library expo was added (version ~54.0.36).
+- The external library expo-constants was added (version ~18.0.13).
+- The external library expo-font was added (version ~14.0.12).
+- The external library expo-haptics was added (version ~15.0.8).
+- The external library expo-image was added (version ~3.0.11).
+- The external library expo-linking was added (version ~8.0.12).
+- The external library expo-router was added (version ~6.0.24).
+- The external library expo-splash-screen was added (version ~31.0.13).
+- The external library expo-status-bar was added (version ~3.0.9).
+- The external library expo-symbols was added (version ~1.0.8).
+- The external library expo-system-ui was added (version ~6.0.9).
+- The external library expo-web-browser was added (version ~15.0.11).
+- The external library react was added (version 19.1.0).
+- The external library react-dom was added (version 19.1.0).
+- The external library react-native was added (version 0.81.5).
+- The external library react-native-gesture-handler was added (version ~2.28.0).
+- The external library react-native-worklets was added (version 0.5.1).
+- The external library react-native-reanimated was added (version ~4.1.1).
+- The external library react-native-safe-area-context was added (version ~5.6.0).
+- The external library react-native-screens was added (version ~4.16.0).
+- The external library react-native-web was added (version ~0.21.0).
+- The development tool @types/react was added (version ~19.1.0).
+- The development tool typescript was added (version ~5.9.2).
+- The development tool eslint was added (version ^9.25.0).
+- The development tool eslint-config-expo was added (version ~10.0.0).
+- The start command of the project was added.
+- The reset project command of the project was added.
+- The android command of the project was added.
+- The ios command of the project was added.
+- The web command of the project was added.
+- The lint command of the project was added.
+- A new collapsible component in the screen area was added; it provides collapsible.
+- A new icon symbol component in the screen area was added; it provides icon mapping, icon symbol name and icon symbol.
+- A new layout screen in the tabs area was added; it provides tab layout.
+- A new icon symbol ios component in the screen area was added; it provides icon symbol.
+- A new modal screen was added; it provides modal screen.
+- A new external link component was added; it provides props and external link; it uses the expo os setting.
+- A new layout screen was added; it provides root layout.
+- A new shared logic for color scheme web was added; it provides shared logic for color scheme.
+- A new shared logic for theme color was added; it provides shared logic for theme color.
+- A new hello wave component was added; it provides hello wave.
+- A new haptic tab component was added; it provides haptic tab; it uses the expo os setting.
+- A new themed view component was added; it provides themed view props and themed view.
+- A new eslint configuration was added.
+- A new shared logic for color scheme was added.
+- 1 dependency lock file was added.
+- 3 written documentation files were added.
+- 5 settings and data files were added.
+- 1 other file was added.
+- 10 image files were added in the images area.
+
+### Impact
+
+- Before deploying, the expo os setting must be configured on the server.
+- External libraries changed, so they must be installed again and the application rebuilt before deploying.
+- Build or deployment settings changed, so the build and the deployment should be checked.
 
 ---
